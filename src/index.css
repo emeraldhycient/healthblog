@@ -1,0 +1,214 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('./assets/font/Graphik-Regular.eot');
+    src: local('Graphik Regular'), local('Graphik-Regular'),
+        url('./assets/font/Graphik-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./assets/font/Graphik-Regular.woff2') format('woff2'),
+        url('./assets/font/Graphik-Regular.woff') format('woff'),
+        url('./assets/font/Graphik-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@layer base {
+	--foreground: 0 0 0;
+    --background: 255 255 255;
+
+	--muted: 249 249 251;
+    --muted-foreground: 82 82 82;
+	--stroke: 137 137 137;
+
+}
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('./assets/font/Graphik-Medium.eot');
+    src: local('Graphik Medium'), local('Graphik-Medium'),
+        url('./assets/font/Graphik-Medium.eot?#iefix') format('embedded-opentype'),
+        url('./assets/font/Graphik-Medium.woff2') format('woff2'),
+        url('./assets/font/Graphik-Medium.woff') format('woff'),
+        url('./assets/font/Graphik-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('./assets/font/Graphik-Bold.eot');
+    src: local('Graphik Bold'), local('Graphik-Bold'),
+        url('./assets/font/Graphik-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./assets/font/Graphik-Bold.woff2') format('woff2'),
+        url('./assets/font/Graphik-Bold.woff') format('woff'),
+        url('./assets/font/Graphik-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Graphik' !important
+}
+
+#errorMain {
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+	background: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Merriweather Sans', sans-serif;
+	z-index: 999;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	overflow: hidden;
+}
+
+#errorText {
+	font-size: 22px;
+	margin: 14px 0;
+}
+
+#errorLink {
+	font-size: 20px;
+	padding: 12px;
+	border: 1px solid;
+	color: #000;
+	background-color: transparent;
+	text-decoration: none;
+	transition: all 0.5s ease-in-out;
+}
+
+#errorLink:hover,
+#errorLink:active {
+	color: #fff;
+	background: #000;
+}
+
+#g6219 {
+	transform-origin: 85px 4px;
+	animation: an1 12s 0.5s infinite ease-out;
+}
+
+@keyframes an1 {
+	0% {
+		transform: rotate(0);
+	}
+	5% {
+		transform: rotate(3deg);
+	}
+	15% {
+		transform: rotate(-2.5deg);
+	}
+	25% {
+		transform: rotate(2deg);
+	}
+	35% {
+		transform: rotate(-1.5deg);
+	}
+	45% {
+		transform: rotate(1deg);
+	}
+	55% {
+		transform: rotate(-1.5deg);
+	}
+	65% {
+		transform: rotate(2deg);
+	}
+	75% {
+		transform: rotate(-2deg);
+	}
+	85% {
+		transform: rotate(2.5deg);
+	}
+	95% {
+		transform: rotate(-3deg);
+	}
+	100% {
+		transform: rotate(0);
+	}
+}
+
+/* section */
+.section {
+	padding: 5rem 0rem;
+  }
+  .section-center {
+	width: 90vw;
+	margin: 0 auto;
+	/* max-width: var(--max-width); */
+  }
+
+/* REACT-QUILL */
+
+  .app {
+	margin: 1rem 4rem;
+  }
+  
+  .app .ql-container {
+	border-bottom-left-radius: 0.5em;
+	border-bottom-right-radius: 0.5em;
+	background: #fefcfc;
+
+  }
+  
+  .app .ql-editor {
+	min-height: 18em;
+  }
+
+  .ql-toolbar.ql-snow {
+	border-top-left-radius: 1.4rem;
+	border-top-right-radius: 1.4rem;
+	padding: 2rem;
+  }
+
+  .ql-container.ql-snow {
+	height: 60vh;
+	border-bottom-left-radius: 1.4rem;
+	border-bottom-right-radius: 1.4rem;
+  }
+  .scrollbar-w-2::-webkit-scrollbar {
+	width: 0.25rem;
+	height: 0.25rem;
+  }
+  
+  .scrollbar-track-blue-lighter::-webkit-scrollbar-track {
+	--bg-opacity: 1;
+	background-color: #f7fafc;
+	background-color: rgba(247, 250, 252, var(--bg-opacity));
+  }
+  
+  .scrollbar-thumb-blue::-webkit-scrollbar-thumb {
+	--bg-opacity: 1;
+	background-color: #edf2f7;
+	background-color: rgba(237, 242, 247, var(--bg-opacity));
+  }
+  
+  .scrollbar-thumb-rounded::-webkit-scrollbar-thumb {
+	border-radius: 0.25rem;
+  }
+
+  .tab-container {
+	display: flex;
+	overflow-x: auto;
+	white-space: nowrap;
+	height: 40px;
+	margin-bottom: 10px;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+  }
+  
+  .tab-item {
+	cursor: pointer;
+	margin-right: 3rem;
+  }
+  
+  .tab-container::-webkit-scrollbar {
+	display: none;
+  }
